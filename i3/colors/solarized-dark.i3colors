@@ -1,0 +1,11 @@
+set $bg-color            #002b36
+set $text-color          #839496
+set $urgent-bg-color     #dc322f
+set $color01             #073642
+set $color02             #dc322f
+set $color03             #859900
+set $color04             #b58900
+set $color05             #268bd2
+set $color06             #d33682
+set $color07             #2aa198
+
