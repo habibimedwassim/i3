@@ -4,20 +4,19 @@
 include ~/.config/i3/settings/keybindings.conf
 
 # Color Scheme Section Start
-set $bg-color            #272727
+set $bg-color            #1e2127
 set $text-color          #abb2bf
 set $urgent-bg-color     #e06c75
-
 set $color01             #5c6370
 set $color02             #e06c75
-set $color03             #98c379
-set $color04             #d19a66
-set $color05             #61afef
-set $color06             #c678dd
-set $color07             #56b6c2
+set $color03             #A3BE8C
+set $color04             #EBCB8B
+set $color05             #81A1C1
+set $color06             #B48EAD
+set $color07             #88C0D0
 
 # Color Scheme Section End
-
+#ebdbb2
 # System Configuration
 set $mod Mod4
 font pango:JetBrainsMono Nerd Font 8
@@ -52,7 +51,7 @@ bar {
         focused_workspace  $color05 $color05 $bg-color
         active_workspace   $bg-color $bg-color $text-color
         inactive_workspace $bg-color $bg-color $text-color
-        urgent_workspace   $urgent-bg-color $urgent-bg-color $bg-color
+        urgent_workspace   $urgent-bg-color $urgent-bg-color $text-color
     }
 }
 gaps inner 10
@@ -61,3 +60,5 @@ gaps outer -4
 # Compositor and Wallpaper
 exec_always picom -CGb &
 exec nitrogen --restore &
+
+
