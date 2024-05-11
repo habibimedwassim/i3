@@ -20,19 +20,24 @@ set $color07             #56b6c2
 
 # System Configuration
 set $mod Mod4
-font pango:JetBrainsMono Nerd Font 8
+set $font JetBrainsMono Nerd Font
+font pango: $font 10
 
 # Autostart applications
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id volctl
 exec --no-startup-id nm-applet
+exec_always --no-startup-id numlockx on
 set $refresh_i3status killall -SIGUSR1 i3status
+bindsym $mod+d exec dmenu_run -nb '$bg-color' -nf '$text-color' -sb '$color05' -sf '$bg-color' -fn '$font-10'
 
 # Visuals and Layout
 floating_modifier $mod
 tiling_drag modifier titlebar
 for_window [class="^.*"] border pixel 2
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Yad"] floating enable
 
 # Window border colors
 client.focused          $color05 $color05 $text-color $color05 $color05
@@ -44,7 +49,7 @@ client.urgent           $color02 $color02 $text-color $color02 $color02
 bar {
     position top
     status_command i3blocks -c /home/wassim/.config/i3blocks/i3blocks.conf
-    font pango:JetBrainsMono Nerd Font 9
+    font pango:$font 9
     colors {
         background $bg-color
         statusline $text-color
@@ -56,8 +61,9 @@ bar {
     }
 }
 gaps inner 10
-gaps outer -4
+gaps outer 2
 
 # Compositor and Wallpaper
 exec_always picom -CGb &
 exec nitrogen --restore &
+

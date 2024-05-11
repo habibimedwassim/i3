@@ -13,24 +13,24 @@ separator_block_width=15
 [spotify]
 label= 
 command=~/.config/i3blocks/scripts/spotify.py
-color=#98c379
+color=#81b71a
 interval=5
 
 [memory]
 command=~/.config/i3blocks/scripts/memory
 label=  
 interval=30
-color=#d19a66
+color=#ff79c6
 
 [cpu_usage2]
 command=~/.config/i3blocks/scripts/cpu_usage2
 markup=pango
 interval=persist
 LABEL=
-color=#c678dd
+color=#bd93f9
 
 [time]
 label=󱑒 
 command=date '+%Y-%m-%d %H:%M'
-color=#56b6c2
+color=#9aedfe
 interval=1
